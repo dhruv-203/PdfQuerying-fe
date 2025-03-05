@@ -69,7 +69,7 @@ function SideBar({
       <div className="h-20 rounded-sm relative mb-2 flex items-center justify-center font-bold shadow-lg bg-gradient-to-r from-[#6366f1] to-[#8b5cf6]">
         <div className="p-2">Conversations</div>
         <RiChatNewLine
-          className="h-6 w-6 absolute self-center text-[#f8fafc] right-6 bottom-7 "
+          className="h-6 w-6 cursor-pointer absolute self-center text-[#f8fafc] right-6 bottom-7 "
           // onClick={handleLogout}
           onClick={handleNewConversation}
         />
@@ -95,7 +95,7 @@ function SideBar({
                   <ConversationCapsule
                     key={conversation}
                     title={conversation}
-                    className={`mb-2 `}
+                    className={`mb-2 hover:cursor-pointer`}
                   />
                 );
               })
@@ -121,7 +121,7 @@ function SideBar({
           <Spinner className="h-8 w-8" />
         ) : (
           <TbLogout2
-            className="h-8 w-8 self-center text-[#f8fafc]"
+            className="h-8 w-8 cursor-pointer self-center text-[#f8fafc]"
             onClick={handleLogout}
           />
         )}
